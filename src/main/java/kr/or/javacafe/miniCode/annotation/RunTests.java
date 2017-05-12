@@ -27,11 +27,12 @@ public class RunTests {
 					System.out.println("메소드 " + m + " 실행실패 : " + ex.getCause());
 					
 				} catch (Exception ex) {
-					System.out.println("용도에 맞지않는 @Test Annotation 사용 : " + m);
+					System.out.println("메소드 " + m + " 용도에 맞지않는 @Test Annotation 사용 : " + ex.getCause());
 				}
 			}
 		}
 		
+		System.out.println();
 		System.out.printf("실행 : %d, 성공 : %d, 실패 : %d%n", tests, passed, tests - passed);
 	}
 
